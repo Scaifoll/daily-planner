@@ -12,9 +12,6 @@ def get_db():
     finally:
         db.close()
         
-@router.get("/", response_model=schemas.Task)
-def main(db: Session = Depends(get_db)):
-    return crud.get_task(db)
 
 @router.post("/tasks/", response_model=schemas.Task)
 def create_task(task: schemas.TaskCreate, db: Session = Depends(get_db)):
