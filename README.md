@@ -1,34 +1,39 @@
-# Daily Planner API
+# 🗓️ Daily Planner API
 
-## Описание
-Backend-приложение ежедневника на FastAPI с CRUD-функциональностью.
+[![GitHub Repo](https://img.shields.io/badge/GitHub-daily--planner-blue?logo=github)](https://github.com/Scaifoll/daily-planner)
+[![FastAPI](https://img.shields.io/badge/Framework-FastAPI-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-## Возможности
-- Создание задачи
-- Получение списка задач
-- Получение задачи по ID
-- Обновление задачи
-- Удаление задачи
-- Отметка задачи как отработанной
+**Daily Planner API** — backend-приложение на FastAPI для ведения ежедневных задач. Предоставляет RESTful API с полной CRUD-функциональностью и возможностью помечать задачи как отработанные.
 
-## Запуск
+---
+
+## 🔧 Стек технологий
+
+- Python 3.10+
+- FastAPI
+- SQLAlchemy
+- Alembic
+- SQLite (по умолчанию, можно заменить на PostgreSQL или MySQL)
+- Pydantic
+
+---
+
+## 📌 Возможности
+
+- ✅ Создание новой задачи
+- 🔍 Получение списка всех задач
+- 📄 Получение задачи по ID
+- ✏️ Обновление задачи
+- ❌ Удаление задачи
+- ☑️ Отметка задачи как выполненной
+
+---
+
+## 🚀 Быстрый старт
+
+### 1. Клонировать репозиторий
 
 ```bash
-pip install -r requirements.txt
-uvicorn app.main:app --reload or py uvicorn app.main:app --reload
-```
-
-## Миграции
-
-```bash
-alembic init alembic
-# Указать путь к metadata в alembic/env.py:
-# from app.database import Base
-# target_metadata = Base.metadata
-
-alembic revision --autogenerate -m "Initial"
-alembic upgrade head
-```
-
-## Документация
-После запуска: [http://localhost:8000/docs](http://localhost:8000/docs)
+git clone https://github.com/Scaifoll/daily-planner.git
+cd daily-planner
